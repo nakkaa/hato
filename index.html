@@ -1,17 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>hato</title>
-    <link href="hato.css" rel="stylesheet">
-    <script src="hato.js" type="text/javascript"></script>
-    <meta name="viewport" content="width=device-width,user-scalable=no">
-</head>
-<body>
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>鳩は唐揚げ</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <h1>鳩は唐揚げ</h1>
+    <body onload="draw();">
+        <canvas id="canvas" width="640" height="480"></canvas>
+        <audio id="bgm" preload="auto">
+            <source src="./img/chicken-cry1.mp3" type="audio/mp3">
+        </audio>
+    </body>
+    <script type="application/javascript">
+        function draw() {
+            var canvas = document.getElementById("canvas").getContext('2d');
+            var img = new Image();
+            img.onload = function(){
+                canvas.drawImage(img,0,0,640,480);
+            };
+            img.src = './img/hato.jpg';
 
-<img alt="pigeon image" id="hato" onclick="clk()" src="img/hato.jpg">
-<progress id="prog" max="100"></progress>
-
-</body>
+        }
+        function onClick(e) {
+            var canvas = document.getElementById("canvas").getContext('2d');
+            var img2 = new Image();
+            img2.onload = function(){
+                canvas.drawImage(img2,0,0,640,480);
+            };
+            img2.src = './img/Karaage_001.jpg';
+            document.getElementById('bgm').play() ;
+        }
+        canvas.addEventListener('click', onClick, false);
+    </script>
 </html>
-
