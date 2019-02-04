@@ -15,6 +15,9 @@
         <div>
             <canvas id="canvas" width="640" height="480"></canvas>
         </div>
+        <div>
+            <p><a href="https://github.com/nakkaa/hato">GitHub</a></p>
+        </div>
         
         <audio id="bgm" preload="auto">
             <source src="./img/chicken-cry1.mp3" type="audio/mp3">
@@ -27,7 +30,7 @@
             img.onload = function(){
                 canvas.drawImage(img,0,0,640,480);
             };
-            img.src = './img/before-hato.jpg';
+            img.src = './img/before_hato.jpg';
 
         }
         function onClick(e) {
@@ -36,7 +39,7 @@
             img2.onload = function(){
                 canvas.drawImage(img2,0,0,640,480);
             };
-            img2.src = './img/after-hato.jpg';
+            img2.src = './img/after_hato.jpg';
             document.getElementById('bgm').play() ;
         }
         canvas.addEventListener('click', onClick, false);
