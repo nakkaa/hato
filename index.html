@@ -9,7 +9,13 @@
     </head>
     <h1>鳩は唐揚げ</h1>
     <body onload="draw();">
-        <canvas id="canvas" width="640" height="480"></canvas>
+        <div>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-text="鳩は唐揚げ" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <div>
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+        
         <audio id="bgm" preload="auto">
             <source src="./img/chicken-cry1.mp3" type="audio/mp3">
         </audio>
@@ -21,7 +27,7 @@
             img.onload = function(){
                 canvas.drawImage(img,0,0,640,480);
             };
-            img.src = './img/hato.jpg';
+            img.src = './img/before-hato.jpg';
 
         }
         function onClick(e) {
@@ -30,7 +36,7 @@
             img2.onload = function(){
                 canvas.drawImage(img2,0,0,640,480);
             };
-            img2.src = './img/Karaage_001.jpg';
+            img2.src = './img/after-hato.jpg';
             document.getElementById('bgm').play() ;
         }
         canvas.addEventListener('click', onClick, false);
